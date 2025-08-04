@@ -56,9 +56,10 @@ int main ()
 		// draw some text using the default font
 		DrawText("Hope Game Initial Conditions", 200,200,20,WHITE);
 
-		// draw our texture to the screen
-		DrawModel(Barbarian, {0.0f, 0.0f, 0.0f}, 1.0f, WHITE);
-
+		BeginMode3D(camera);
+			// draw our texture to the screen
+			DrawModel(Barbarian, {0.0f, 0.0f, 0.0f}, 1.0f, WHITE);
+		EndMode3D();
 
 		// end the frame and get ready for the next one  (display frame, poll input, etc...)
 		EndDrawing();
